@@ -1,4 +1,4 @@
-﻿human_label,pred_F,pred_M,pred_P,pred_R,pred_C,pred_A,pred_N
+human_label,pred_F,pred_M,pred_P,pred_R,pred_C,pred_A,pred_N
 F,106,6,8,2,0,0,0
 M,0,12,0,0,0,0,0
 P,1,0,360,2,0,14,0
