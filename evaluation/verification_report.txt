@@ -1,0 +1,25 @@
+seed = 42; bootstrap = 2000; majority tie-break = model
+Reference file: annotation_1200_with_models.csv
+  human column = classification; model columns = {'ds32': 'DS32_Category_ID', 'gpt5': 'GPT5_Category_ID', 'mil3': 'MIL3_Category_ID'}; journal column = journal_y
+  usable rows = 1,200; dropped = 0
+  reference counts per category: F=122, M=12, P=377, R=33, C=32, A=449, N=175
+
+Overall performance (n = 1200):
+                   method  n_correct  accuracy  kappa  weighted_F1  macro_F1
+            DeepSeek-V3.2       1101    0.9175 0.8860       0.9184    0.8144
+                  GPT-5.4       1080    0.9000 0.8611       0.9013    0.7790
+          Mistral-Large-3       1101    0.9175 0.8859       0.9177    0.8109
+            Majority vote       1105    0.9208 0.8904       0.9211    0.8369
+Random Forest (5-fold CV)       1125    0.9375 0.9139       0.9378    0.8442
+     Random Forest (LOJO)       1125    0.9375 0.9139       0.9378    0.8423
+
+Comparison with the manuscript (tolerance 0.005):
+  [OK   ] Majority vote: accuracy 0.9208 / kappa 0.8904  (manuscript 0.9208 / 0.8904)
+  [OK   ] Random Forest (5-fold CV): accuracy 0.9375 / kappa 0.9139  (manuscript 0.9375 / 0.9139)
+  [OK   ] Random Forest (LOJO), mean of journals: accuracy 0.9375 / kappa 0.9018  (manuscript 0.9375 / 0.9018)
+  single models: 0.9000-0.9175  (manuscript 0.9000-0.9175)
+  majority vote correct = 1105  (Zenodo confusion_matrix.csv: 1105 of 1200)
+  reference counts M/C/R = 12/32/33  (manuscript 12/32/33)
+
+Tie-break check: tie-break='model' -> 1105 correct; tie-break='category' -> 1104 correct.
+  rows where all three models disagree: 10

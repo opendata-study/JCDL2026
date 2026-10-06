@@ -1,0 +1,14 @@
+method,scope,n,accuracy,kappa,weighted_F1,macro_F1
+Random Forest (5-fold CV),overall (pooled predictions),1200,0.9375,0.9139,0.9378,0.8442
+Random Forest (LOJO),overall (pooled predictions),1200,0.9375,0.9139,0.9378,0.8423
+Random Forest (LOJO),mean over held-out journals,1200,0.9375,0.9018,,
+Random Forest (LOJO),held-out journal: Heliyon,120,0.9667,0.9513,,
+Random Forest (LOJO),held-out journal: IntJEnvironResPublicHealth,120,0.9083,0.8637,,
+Random Forest (LOJO),held-out journal: IntJMolSci,120,0.9667,0.9506,,
+Random Forest (LOJO),held-out journal: JClinMed,120,0.9167,0.8463,,
+Random Forest (LOJO),held-out journal: MaterialsBasel,120,0.9667,0.9485,,
+Random Forest (LOJO),held-out journal: Molecules,120,0.9583,0.9348,,
+Random Forest (LOJO),held-out journal: NatCommun,120,0.8917,0.8476,,
+Random Forest (LOJO),held-out journal: PLoSOne,120,0.9250,0.8530,,
+Random Forest (LOJO),held-out journal: SciRep,120,0.9250,0.8916,,
+Random Forest (LOJO),held-out journal: SensorsBasel,120,0.9500,0.9300,,
